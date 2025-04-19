@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload to IPFS</title>
+</head>
+<body>
+    <h1>Upload File to IPFS</h1>
+    <form action="/ipfs/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Choose a file:</label>
+        <input type="file" id="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
